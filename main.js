@@ -6,6 +6,11 @@ const productos = [
 
 let cards = "";
 
+const nombre = "Facu";
+
+const texto = "hola, el nombre de el alumno es Facundo"+nombre
+const textoTemplateString = `bienvenidos a el desafio mi nonmbre es: ${nombre}`
+
  /* const idButton = "btn-agregar"+producto.id */
 
 productos.forEach((producto) => {
@@ -21,5 +26,13 @@ productos.forEach((producto) => {
 function agregarAlCarrito(tituloProducto) {
     alert("Alta pizza!"+tituloProducto);
 }
+
+productos.forEach((producto) => {
+    const idButton = `add-cart${producto.id}`
+    document.getElementById(idButton).addEventListener('click', (event) => {
+        console.log(event)
+        alert("holiwis");
+    })
+});
 
 document.getElementById("here-one").innerHTML = cards;
